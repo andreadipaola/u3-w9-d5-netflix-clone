@@ -12,11 +12,29 @@
   }
 }
 
-// #carousel img {
-//   height: 200px;
-//   width: auto;
-//   object-fit: cover;
-// }
+#carousel img {
+  width: 100%;
+  height: 10vw;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 991px) {
+  #carousel img {
+    height: 20vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #carousel img {
+    height: 28vw;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #carousel img {
+    height: 50vw;
+  }
+}
 
 // PROFILE.HTML
 .pencil-container {
@@ -33,7 +51,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   #column-second-element {
     flex-direction: column;
     div.col-3 {

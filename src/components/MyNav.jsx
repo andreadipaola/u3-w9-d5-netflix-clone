@@ -2,7 +2,7 @@ import { Container, Dropdown, Nav, Navbar } from "react-bootstrap";
 import avatar from "../assets/img/avatar.png";
 
 const MyNav = (props) => (
-  <Navbar fixed="top" bg="light" expand="lg" className="py-1">
+  <Navbar fixed="top" bg="light" expand="lg" className="py-1" data-bs-theme="dark">
     <Container>
       <Navbar.Brand href="#home">
         <svg xmlns="http://www.w3.org/2000/svg" width="70" height="auto" viewBox="0 0 1024 276.742">

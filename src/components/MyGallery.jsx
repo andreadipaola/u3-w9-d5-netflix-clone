@@ -53,7 +53,7 @@ class MyGallery extends Component {
         )}
         <Carousel id="carousel" className="mb-5">
           <Carousel.Item>
-            <Row className="row-cols-2 row-cols-md-3 row-cols-lg-6 gx-1 gy-2">
+            <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 gx-1 gy-2">
               {this.state.movies.slice(0, 6).map((movie) => (
                 <Col>
                   <img className="img-fluid" src={movie.Poster} alt="" />
@@ -63,7 +63,7 @@ class MyGallery extends Component {
           </Carousel.Item>
 
           <Carousel.Item>
-            <Row className="row-cols-2 row-cols-md-3 row-cols-lg-6 gx-1 gy-2">
+            <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 gx-1 gy-2">
               {this.state.movies.slice(0, 6).map((movie) => (
                 <Col>
                   <img className="img-fluid" src={movie.Poster} alt="" />
@@ -73,7 +73,7 @@ class MyGallery extends Component {
           </Carousel.Item>
 
           <Carousel.Item>
-            <Row className="row-cols-2 row-cols-md-3 row-cols-lg-6 gx-1 gy-2">
+            <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 gx-1 gy-2">
               {this.state.movies.slice(0, 6).map((movie) => (
                 <Col>
                   <img className="img-fluid" src={movie.Poster} alt="" />
