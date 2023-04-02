@@ -5,15 +5,24 @@ import MyFooter from "./components/MyFooter";
 import MySettings from "./components/MySettings";
 
 const App = () => (
-  // <div className="bg-custom-dark text-custom-white">
+  // <>
   //   <MyNav />
   //   <MyControlBar />
   //   <MyGallery title="Avengers" />
   //   <MyGallery title="Guardians of the Galaxy" />
   //   <MyGallery title="Thor" />
   //   <MyFooter />
-  // </div>
-  <MySettings />
+  // </>
+
+  // <>
+  //   <MyNav />
+  //   <MySettings />
+  // </>
+
+  <>
+    <MyNav />
+    <MySettings />
+  </>
 );
 
 export default App;

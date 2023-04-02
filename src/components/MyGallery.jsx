@@ -35,7 +35,7 @@ class MyGallery extends Component {
 
   render() {
     return (
-      <>
+      <div className="bg-custom-dark text-custom-white">
         <Container>
           <h3 className="mb-3">{this.props.title}</h3>
           {/* <h3 className="mb-3">titolo</h3> */}
@@ -51,38 +51,40 @@ class MyGallery extends Component {
         {this.state.error && !this.state.isLoading && (
           <Alert variant="danger">{this.state.errorMsg ? this.state.errorMsg : "Errore nel reperire i dati"}</Alert>
         )}
-        <Carousel id="carousel" className="mb-5" indicators={false} interval={null}>
-          <Carousel.Item>
-            <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 gx-1 gy-2">
-              {this.state.movies.slice(0, 6).map((movie) => (
-                <Col>
-                  <img className="img-fluid" src={movie.Poster} alt="" />
-                </Col>
-              ))}
-            </Row>
-          </Carousel.Item>
+        <div className="bg-custom-dark pb-5">
+          <Carousel id="carousel" indicators={false} interval={null}>
+            <Carousel.Item>
+              <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 gx-1 gy-2">
+                {this.state.movies.slice(0, 6).map((movie) => (
+                  <Col>
+                    <img className="img-fluid" src={movie.Poster} alt="" />
+                  </Col>
+                ))}
+              </Row>
+            </Carousel.Item>
 
-          <Carousel.Item>
-            <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 gx-1 gy-2">
-              {this.state.movies.slice(0, 6).map((movie) => (
-                <Col>
-                  <img className="img-fluid" src={movie.Poster} alt="" />
-                </Col>
-              ))}
-            </Row>
-          </Carousel.Item>
+            <Carousel.Item>
+              <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 gx-1 gy-2">
+                {this.state.movies.slice(0, 6).map((movie) => (
+                  <Col>
+                    <img className="img-fluid" src={movie.Poster} alt="" />
+                  </Col>
+                ))}
+              </Row>
+            </Carousel.Item>
 
-          <Carousel.Item>
-            <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 gx-1 gy-2">
-              {this.state.movies.slice(0, 6).map((movie) => (
-                <Col>
-                  <img className="img-fluid" src={movie.Poster} alt="" />
-                </Col>
-              ))}
-            </Row>
-          </Carousel.Item>
-        </Carousel>
-      </>
+            <Carousel.Item>
+              <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 gx-1 gy-2">
+                {this.state.movies.slice(0, 6).map((movie) => (
+                  <Col>
+                    <img className="img-fluid" src={movie.Poster} alt="" />
+                  </Col>
+                ))}
+              </Row>
+            </Carousel.Item>
+          </Carousel>
+        </div>
+      </div>
     );
   }
 }
