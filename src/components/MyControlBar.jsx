@@ -1,7 +1,7 @@
 import { Button, ButtonGroup, Container, Dropdown } from "react-bootstrap";
 
 const MyControlBar = () => (
-  <Container id="control-bar" className="mb-4 mt-13">
+  <Container id="control-bar" className="mb-4 pt-13">
     <div className="d-flex justify-content-between">
       <div className="d-flex align-items-center">
         <h2 className="me-5">TV Shows</h2>

@@ -2,7 +2,7 @@ import { Container, Dropdown, Nav, Navbar } from "react-bootstrap";
 import avatar from "../assets/img/avatar.png";
 
 const MyNav = (props) => (
-  <Navbar fixed="top" bg="light" expand="lg" className="py-1" data-bs-theme="dark">
+  <Navbar fixed="top" expand="lg" className="bg-custom-dark py-1">
     <Container>
       <Navbar.Brand href="#home">
         <svg xmlns="http://www.w3.org/2000/svg" width="70" height="auto" viewBox="0 0 1024 276.742">
@@ -14,12 +14,20 @@ const MyNav = (props) => (
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="me-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#link">TV Shows</Nav.Link>
-          <Nav.Link href="#link">Movies</Nav.Link>
-          <Nav.Link href="#link">Recently Added</Nav.Link>
-          <Nav.Link href="#link" className="">
+        <Nav className="me-auto text-custom-white">
+          <Nav.Link className="text-custom-white" href="#home">
+            Home
+          </Nav.Link>
+          <Nav.Link className="text-custom-white" href="#link">
+            TV Shows
+          </Nav.Link>
+          <Nav.Link className="text-custom-white" href="#link">
+            Movies
+          </Nav.Link>
+          <Nav.Link className="text-custom-white" href="#link">
+            Recently Added
+          </Nav.Link>
+          <Nav.Link className="text-custom-white" href="#link">
             My List
           </Nav.Link>
         </Nav>
