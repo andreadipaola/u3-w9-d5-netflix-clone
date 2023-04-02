@@ -51,7 +51,7 @@ class MyGallery extends Component {
         {this.state.error && !this.state.isLoading && (
           <Alert variant="danger">{this.state.errorMsg ? this.state.errorMsg : "Errore nel reperire i dati"}</Alert>
         )}
-        <Carousel id="carousel" className="mb-5">
+        <Carousel id="carousel" className="mb-5" indicators={false} interval={null}>
           <Carousel.Item>
             <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 gx-1 gy-2">
               {this.state.movies.slice(0, 6).map((movie) => (
