@@ -1,7 +1,7 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
 
 const MyFooter = () => (
-  <Container id="footer" className="mt-13 py-3 pfs-13 text-custom-darkgray">
+  <Container id="footer" className="mt-13 pb-5 py-3 pfs-13 text-custom-darkgray">
     <Row className="d-flex justify-content-center">
       <Col className="col-8">
         <div className="mb-4">
