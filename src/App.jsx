@@ -7,9 +7,9 @@ const App = () => (
   <>
     <MyNav />
     <MyControlBar />
-    <MyGallery />
-    <MyGallery />
-    <MyGallery />
+    <MyGallery title="Avengers" />
+    <MyGallery title="Guardians of the Galaxy" />
+    <MyGallery title="Thor" />
     <MyFooter />
   </>
 );

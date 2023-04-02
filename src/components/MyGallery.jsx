@@ -1,10 +1,8 @@
 import { Component } from "react";
 import { Alert, Carousel, Col, Container, Row, Spinner } from "react-bootstrap";
 
-const string = "Game of Thrones";
-const string2 = "Guardians of the galaxy";
-const searchKeyWord = string.toLowerCase().replace(/ /g, "%20");
-const searchApi = "http://www.omdbapi.com/?apikey=c326b3e7&s=";
+// const string = "Game of Thrones";
+// const string2 = "Guardians of the galaxy";
 
 class MyGallery extends Component {
   state = {
@@ -14,15 +12,15 @@ class MyGallery extends Component {
     isLoading: true
   };
 
-  fetchGallery = async () => {
+  fetchGallery = async (string) => {
+    const searchApi = "http://www.omdbapi.com/?apikey=c326b3e7&s=";
+    const searchKeyWord = string.toLowerCase().replace(/ /g, "%20");
     try {
       const response = await fetch(searchApi + searchKeyWord);
 
       if (response.ok) {
         const data = await response.json();
-        // console.log("FETCH RESULT: ", data.Search);
         this.setState({ movies: data.Search, isLoading: false });
-        // console.log(this.setState);
       } else {
         this.setState({ error: true, isLoading: false });
       }
@@ -32,16 +30,15 @@ class MyGallery extends Component {
   };
 
   componentDidMount = () => {
-    console.log("COMPONENT DID MOUNT");
-    this.fetchGallery();
+    this.fetchGallery(this.props.title);
   };
 
   render() {
-    console.log("RENDER");
     return (
       <>
         <Container>
-          <h3 className="mb-3">Trending Now</h3>
+          <h3 className="mb-3">{this.props.title}</h3>
+          {/* <h3 className="mb-3">titolo</h3> */}
         </Container>
         <Container>
           {this.state.isLoading && !this.state.error && (
@@ -59,7 +56,7 @@ class MyGallery extends Component {
             <Row className="row-cols-2 row-cols-md-3 row-cols-lg-6 gx-1 gy-2">
               {this.state.movies.slice(0, 6).map((movie) => (
                 <Col>
-                  <img src={movie.Poster} alt="" />
+                  <img className="img-fluid" src={movie.Poster} alt="" />
                 </Col>
               ))}
             </Row>
@@ -69,7 +66,7 @@ class MyGallery extends Component {
             <Row className="row-cols-2 row-cols-md-3 row-cols-lg-6 gx-1 gy-2">
               {this.state.movies.slice(0, 6).map((movie) => (
                 <Col>
-                  <img src={movie.Poster} alt="" />
+                  <img className="img-fluid" src={movie.Poster} alt="" />
                 </Col>
               ))}
             </Row>
@@ -79,7 +76,7 @@ class MyGallery extends Component {
             <Row className="row-cols-2 row-cols-md-3 row-cols-lg-6 gx-1 gy-2">
               {this.state.movies.slice(0, 6).map((movie) => (
                 <Col>
-                  <img src={movie.Poster} alt="" />
+                  <img className="img-fluid" src={movie.Poster} alt="" />
                 </Col>
               ))}
             </Row>
