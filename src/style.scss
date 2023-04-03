@@ -2,6 +2,10 @@
 // @import "bootstrap/scss/bootstrap";
 
 // INDEX.HTML
+.navbar-toggler-icon {
+  filter: invert(100%);
+}
+
 #avatar-btn {
   &:hover,
   &:active {

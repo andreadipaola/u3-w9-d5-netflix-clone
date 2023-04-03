@@ -12,7 +12,7 @@ const MyNav = (props) => (
           />
         </svg>
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Toggle className="text-custom-white" aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto text-custom-white">
           <Nav.Link className="text-custom-white" href="#home">
