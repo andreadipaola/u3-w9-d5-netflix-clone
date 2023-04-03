@@ -55,8 +55,8 @@ class MyGallery extends Component {
           <Carousel id="carousel" indicators={false} interval={null}>
             <Carousel.Item>
               <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 gx-1 gy-2">
-                {this.state.movies.slice(0, 6).map((movie) => (
-                  <Col>
+                {this.state.movies.slice(0, 6).map((movie, index) => (
+                  <Col key={`Item-1.${index}`}>
                     <img className="img-fluid" src={movie.Poster} alt="" />
                   </Col>
                 ))}
@@ -65,8 +65,8 @@ class MyGallery extends Component {
 
             <Carousel.Item>
               <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 gx-1 gy-2">
-                {this.state.movies.slice(0, 6).map((movie) => (
-                  <Col>
+                {this.state.movies.slice(0, 6).map((movie, index) => (
+                  <Col key={`Item-1.${index}`}>
                     <img className="img-fluid" src={movie.Poster} alt="" />
                   </Col>
                 ))}
@@ -75,8 +75,8 @@ class MyGallery extends Component {
 
             <Carousel.Item>
               <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 gx-1 gy-2">
-                {this.state.movies.slice(0, 6).map((movie) => (
-                  <Col>
+                {this.state.movies.slice(0, 6).map((movie, index) => (
+                  <Col key={`Item-1.${index}`}>
                     <img className="img-fluid" src={movie.Poster} alt="" />
                   </Col>
                 ))}
