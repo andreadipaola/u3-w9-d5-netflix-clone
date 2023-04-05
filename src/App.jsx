@@ -6,14 +6,14 @@ import MySettings from "./components/MySettings";
 import MyProfile from "./components/MyProfile";
 
 const App = () => (
-  <>
+  <div className="vh-100 bg-custom-dark">
     <MyNav />
     <MyControlBar />
     <MyGallery title="Avengers" />
     <MyGallery title="Guardians of the Galaxy" />
     <MyGallery title="Thor" />
     <MyFooter />
-  </>
+  </div>
 
   // <>
   //   <MyNav />

@@ -1,4 +1,4 @@
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 
 const MyFooter = () => (
   <div className="bg-custom-dark">
@@ -40,6 +40,7 @@ const MyFooter = () => (
 
         <div className="mb-3">
           <Button variant="outline-custom-darkgray" className="pfs-13">
+            {/* <Button variant="primary" className="pfs-13"> */}
             Service Code
           </Button>
         </div>
